@@ -1,0 +1,138 @@
+.quote-section {
+  position: relative;
+
+  min-height: 580px;
+
+  display: grid;
+
+  place-items: center;
+
+  overflow: hidden;
+
+  background:
+    #170602;
+}
+
+.quote-background {
+  position: absolute;
+
+  font-family:
+    "Rozha One",
+    serif;
+
+  font-size: 420px;
+
+  color:
+    rgba(226, 98, 14, 0.035);
+
+  user-select: none;
+}
+
+.quote-content-large {
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+
+  max-width: 760px;
+
+  padding: 40px;
+}
+
+.quote-small {
+  color: #d87924;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+}
+
+.large-quote {
+  margin-top: 25px;
+
+  color: #f2d29d;
+
+  font-family:
+    "Rozha One",
+    serif;
+
+  font-size:
+    clamp(
+      32px,
+      4vw,
+      54px
+    );
+
+  line-height: 1.25;
+
+  animation:
+    quoteFade 0.7s ease;
+}
+
+@keyframes quoteFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quote-content-large p {
+  margin-top: 20px;
+
+  color: #9b7558;
+
+  font-size: 11px;
+}
+
+.quote-divider {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-top: 28px;
+
+  color: #d57a25;
+
+  font-size: 15px;
+}
+
+.quote-divider span {
+  width: 70px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #a94b10
+    );
+}
+
+.quote-divider span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      #a94b10,
+      transparent
+    );
+}
+
+.jai-ram {
+  margin-top: 15px;
+
+  color: #d7832d;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+}

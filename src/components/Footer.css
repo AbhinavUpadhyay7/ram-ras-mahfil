@@ -1,0 +1,97 @@
+.footer {
+  position: relative;
+
+  padding:
+    100px 7vw 35px;
+
+  text-align: center;
+
+  background:
+    #0e0301;
+
+  border-top:
+    1px solid
+    rgba(255, 190, 85, 0.08);
+}
+
+.footer-symbol {
+  color: #d8751e;
+
+  font-size: 38px;
+
+  margin-bottom: 15px;
+}
+
+.footer h2 {
+  color: #f1d19b;
+
+  font-family:
+    "Rozha One",
+    serif;
+
+  font-weight: 400;
+
+  font-size: 38px;
+}
+
+.footer h2 span {
+  color: #d66c18;
+}
+
+.footer p {
+  margin-top: 13px;
+
+  color: #76533e;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+}
+
+.footer-line {
+  width: 100px;
+
+  height: 1px;
+
+  margin:
+    35px auto;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #a74b11,
+      transparent
+    );
+}
+
+.footer-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #5e4435;
+
+  font-size: 8px;
+}
+
+.footer-bottom span:nth-child(2) {
+  color: #8e6347;
+}
+
+@media (max-width: 700px) {
+  .footer {
+    padding:
+      70px 20px 30px;
+  }
+
+  .footer h2 {
+    font-size: 28px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    gap: 12px;
+  }
+}

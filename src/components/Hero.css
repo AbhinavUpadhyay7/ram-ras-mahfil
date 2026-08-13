@@ -1,0 +1,1190 @@
+/* =====================================================
+   HERO — RAM RAS MAHFIL
+===================================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+
+  overflow: hidden;
+
+  color: #5b2306;
+
+  background:
+    radial-gradient(
+      ellipse at 56% 42%,
+      #fff3c8 0%,
+      #ffd982 30%,
+      #f7ad47 65%,
+      #e87918 100%
+    );
+}
+
+
+/* =====================================================
+   BACKGROUND LIGHT
+===================================================== */
+
+.hero-glow {
+  position: absolute;
+
+  width: 900px;
+  height: 900px;
+
+  left: 61%;
+  top: 44%;
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 250, 220, 0.9) 0%,
+      rgba(255, 225, 150, 0.65) 25%,
+      rgba(255, 187, 68, 0.22) 50%,
+      transparent 74%
+    );
+
+  filter: blur(15px);
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+.hero-circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+.circle-one {
+  width: 620px;
+  height: 620px;
+
+  left: 52%;
+  top: 7%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 244, 188, 0.6),
+      transparent 70%
+    );
+
+  filter: blur(25px);
+}
+
+
+.circle-two {
+  width: 450px;
+  height: 450px;
+
+  left: -180px;
+  bottom: -240px;
+
+  background:
+    rgba(190, 61, 3, 0.1);
+
+  filter: blur(80px);
+}
+
+
+/* =====================================================
+   LEFT MAIN MESSAGE
+===================================================== */
+
+.hero-message {
+  position: absolute;
+
+  left: 4.2vw;
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  width: 510px;
+
+  z-index: 20;
+}
+
+
+.hero-overline {
+  margin-bottom: 17px;
+
+  color:
+    rgba(133, 55, 10, 0.82);
+
+  font-size: 10px;
+
+  letter-spacing: 1.5px;
+
+  font-weight: 600;
+}
+
+
+.hero-message h1 {
+  margin: 0;
+
+  font-family:
+    "Rozha One",
+    "Noto Serif Devanagari",
+    serif;
+
+  font-size:
+    clamp(
+      55px,
+      5.15vw,
+      80px
+    );
+
+  line-height: 0.94;
+
+  font-weight: 400;
+
+  letter-spacing: -2px;
+
+  color: #702a05;
+
+  text-shadow:
+    0 4px 25px
+    rgba(125, 47, 4, 0.08);
+}
+
+
+.hero-message h1 span {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #d85b08;
+}
+
+
+/* =====================================================
+   LEFT DIVIDER
+===================================================== */
+
+.message-divider {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  width: 205px;
+
+  margin-top: 21px;
+}
+
+
+.message-divider span {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(175, 73, 7, 0.65)
+    );
+}
+
+
+.message-divider span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(175, 73, 7, 0.65),
+      transparent
+    );
+}
+
+
+.divider-diya {
+  flex: 0 0 auto !important;
+
+  color: #d45b08;
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   RIGHT RAM VISUAL
+===================================================== */
+
+.hero-visual {
+
+  position: absolute;
+
+  right: 2.5%;
+  top: 50%;
+
+  width: 700px;
+  height: 760px;
+
+  transform:
+    translateY(-49%);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   IMPORTANT IMAGE BLENDING
+===================================================== */
+
+/*
+   Ram image ko website ke background me dissolve
+   karne ka main section.
+*/
+
+.hero-visual img {
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  /*
+    White/original background ko page ke
+    orange background me dissolve karta hai.
+  */
+
+  mix-blend-mode: multiply;
+
+  /*
+    Image ko subtle rakhta hai.
+  */
+
+  opacity: 0.48;
+
+  /*
+    Original image ke colors ko warm bhagwa
+    tone ki taraf shift karta hai.
+  */
+
+  filter:
+    sepia(0.42)
+    saturate(0.72)
+    brightness(1.13)
+    contrast(0.84);
+
+  /*
+    Edges ko softly fade karta hai.
+  */
+
+  -webkit-mask-image:
+    radial-gradient(
+      ellipse 66% 70% at 50% 48%,
+      #000 42%,
+      rgba(0,0,0,0.92) 58%,
+      rgba(0,0,0,0.55) 73%,
+      transparent 94%
+    );
+
+  mask-image:
+    radial-gradient(
+      ellipse 66% 70% at 50% 48%,
+      #000 42%,
+      rgba(0,0,0,0.92) 58%,
+      rgba(0,0,0,0.55) 73%,
+      transparent 94%
+    );
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+
+/*
+   Agar RamVisual ke andar image kisi
+   specific class me hai to ye bhi apply hoga.
+*/
+
+.hero-visual picture img {
+
+  mix-blend-mode: multiply;
+
+  opacity: 0.48;
+
+  filter:
+    sepia(0.42)
+    saturate(0.72)
+    brightness(1.13)
+    contrast(0.84);
+}
+
+
+/* =====================================================
+   EXTRA WARM LIGHT OVER IMAGE
+===================================================== */
+
+.hero-visual::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 5%;
+
+  pointer-events: none;
+
+  z-index: 10;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(255, 215, 117, 0.12) 0%,
+      rgba(245, 145, 37, 0.08) 45%,
+      transparent 75%
+    );
+
+  mix-blend-mode: screen;
+
+  filter: blur(12px);
+}
+
+
+/* =====================================================
+   CENTER WEBSITE TITLE
+===================================================== */
+
+.ram-mahfil-title {
+
+  position: fixed;
+
+  left: 50%;
+
+  top: 45%;
+
+  transform:
+    translate(-50%, -50%);
+
+  width: 440px;
+
+  text-align: center;
+
+  z-index: 100;
+
+  pointer-events: none;
+
+  animation:
+    mahfilFloat
+    6s
+    ease-in-out
+    infinite;
+}
+
+
+@keyframes mahfilFloat {
+
+  0%,
+  100% {
+    transform:
+      translate(
+        -50%,
+        -50%
+      );
+  }
+
+  50% {
+    transform:
+      translate(
+        -50%,
+        calc(-50% - 4px)
+      );
+  }
+}
+
+
+/* =====================================================
+   SMALL TITLE
+===================================================== */
+
+.mahfil-small {
+
+  margin-bottom: 5px;
+
+  color:
+    rgba(
+      111,
+      39,
+      4,
+      0.8
+    );
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   RAM RAS
+===================================================== */
+
+.ram-mahfil-title h2 {
+
+  margin: 0;
+
+  font-family:
+    "Rozha One",
+    "Noto Serif Devanagari",
+    serif;
+
+  font-size: 58px;
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: 1px;
+
+  color:
+    rgba(
+      102,
+      34,
+      3,
+      0.97
+    );
+
+  text-shadow:
+    0 4px 25px
+    rgba(
+      255,
+      247,
+      210,
+      0.72
+    );
+}
+
+
+/* =====================================================
+   MAHFIL
+===================================================== */
+
+.ram-mahfil-title h3 {
+
+  margin: 4px 0 0;
+
+  font-family:
+    "Rozha One",
+    "Noto Serif Devanagari",
+    serif;
+
+  font-size: 68px;
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: 1px;
+
+  color:
+    rgba(
+      211,
+      81,
+      4,
+      0.98
+    );
+
+  text-shadow:
+    0 5px 25px
+    rgba(
+      255,
+      228,
+      165,
+      0.72
+    );
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.mahfil-subtitle {
+
+  margin-top: 13px;
+
+  color:
+    rgba(
+      112,
+      54,
+      19,
+      0.78
+    );
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   TITLE DIVIDER
+===================================================== */
+
+.mahfil-divider {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  width: 160px;
+
+  margin:
+    10px auto 0;
+
+  color:
+    rgba(
+      181,
+      76,
+      8,
+      0.72
+    );
+}
+
+
+.mahfil-divider span {
+
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(
+        165,
+        67,
+        5,
+        0.62
+      )
+    );
+}
+
+
+.mahfil-divider span:last-child {
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(
+        165,
+        67,
+        5,
+        0.62
+      ),
+      transparent
+    );
+}
+
+
+.mahfil-diya {
+
+  flex: 0 0 auto !important;
+
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   TOP RIGHT LABEL
+===================================================== */
+
+.visual-label {
+
+  position: absolute;
+
+  top: 13%;
+  right: 7%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  z-index: 40;
+
+  color:
+    rgba(
+      126,
+      49,
+      8,
+      0.8
+    );
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+}
+
+
+.visual-label span {
+
+  color: #d45e0b;
+
+  font-size: 18px;
+}
+
+
+.visual-label small {
+
+  font-size: 9px;
+}
+
+
+/* =====================================================
+   RIGHT VERTICAL MANTRA
+===================================================== */
+
+.side-mantra {
+
+  position: absolute;
+
+  right: 2.4%;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  height: 45%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  z-index: 40;
+}
+
+
+.side-line {
+
+  width: 1px;
+
+  height: 70px;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(145, 58, 7, 0.7),
+      transparent
+    );
+}
+
+
+.side-word {
+
+  writing-mode:
+    vertical-rl;
+
+  color:
+    rgba(
+      120,
+      43,
+      5,
+      0.3
+    );
+
+  font-family:
+    "Rozha One",
+    serif;
+
+  font-size: 28px;
+}
+
+
+.side-items {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  color:
+    rgba(
+      129,
+      67,
+      34,
+      0.68
+    );
+
+  font-size: 7px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   BOTTOM MANTRA
+===================================================== */
+
+.bottom-mantra {
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 91px;
+
+  transform:
+    translateX(-50%);
+
+  z-index: 50;
+
+  white-space: nowrap;
+
+  color:
+    rgba(
+      132,
+      69,
+      33,
+      0.68
+    );
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+}
+
+
+.bottom-mantra span {
+
+  margin:
+    0 7px;
+
+  color: #d45e0b;
+}
+
+
+/* =====================================================
+   DIYA
+===================================================== */
+
+.corner-diya {
+
+  position: absolute;
+
+  left: 25px;
+
+  bottom: 108px;
+
+  width: 45px;
+  height: 22px;
+
+  z-index: 50;
+
+  border-radius:
+    50% 50% 45% 45%;
+
+  background:
+    linear-gradient(
+      #ec8c2b,
+      #ad3b06
+    );
+
+  box-shadow:
+    0 10px 35px
+    rgba(
+      189,
+      67,
+      3,
+      0.3
+    );
+}
+
+
+.flame {
+
+  position: absolute;
+
+  left: 50%;
+
+  top: -27px;
+
+  width: 12px;
+  height: 25px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius:
+    50% 50% 45% 45%;
+
+  background:
+    radial-gradient(
+      circle at 50% 65%,
+      #fff7c7 0 18%,
+      #ffc44e 19% 50%,
+      #e3650d 51%
+    );
+
+  box-shadow:
+    0 0 20px
+    rgba(
+      255,
+      160,
+      41,
+      0.75
+    );
+
+  animation:
+    flameMove
+    1s
+    infinite
+    ease-in-out;
+}
+
+
+@keyframes flameMove {
+
+  0%,
+  100% {
+    transform:
+      translateX(-50%)
+      rotate(-5deg)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translateX(-50%)
+      rotate(5deg)
+      scale(1.08);
+  }
+}
+
+
+/* =====================================================
+   HIDDEN DEVOTIONAL MESSAGE
+===================================================== */
+
+.devotional-message {
+  display: none;
+}
+
+
+/* =====================================================
+   DESKTOP LARGE
+===================================================== */
+
+@media (min-width: 1400px) {
+
+  .hero-visual {
+
+    right: 3%;
+
+    width: 760px;
+    height: 820px;
+  }
+
+
+  .ram-mahfil-title {
+
+    top: 45%;
+
+    width: 460px;
+  }
+}
+
+
+/* =====================================================
+   LAPTOP
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .hero-message {
+
+    left: 4vw;
+
+    width: 430px;
+  }
+
+
+  .hero-message h1 {
+
+    font-size: 58px;
+  }
+
+
+  .hero-visual {
+
+    right: -4%;
+
+    width: 620px;
+    height: 700px;
+
+    transform:
+      translateY(-48%)
+      scale(0.88);
+  }
+
+
+  .hero-visual img {
+
+    opacity: 0.43;
+  }
+
+
+  .ram-mahfil-title {
+
+    width: 410px;
+
+    top: 45%;
+  }
+
+
+  .ram-mahfil-title h2 {
+
+    font-size: 52px;
+  }
+
+
+  .ram-mahfil-title h3 {
+
+    font-size: 61px;
+  }
+
+
+  .side-mantra {
+
+    display: none;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .hero {
+
+    min-height: 600px;
+  }
+
+
+  /* LEFT MESSAGE */
+
+  .hero-message {
+
+    left: 0;
+
+    top: 25%;
+
+    width: 100%;
+
+    padding:
+      0 15px;
+
+    transform:
+      translateY(-50%);
+
+    text-align: center;
+  }
+
+
+  .hero-overline {
+
+    margin-bottom: 8px;
+
+    font-size: 7px;
+  }
+
+
+  .hero-message h1 {
+
+    font-size: 39px;
+
+    line-height: 0.96;
+
+    letter-spacing: -1px;
+  }
+
+
+  .message-divider {
+
+    width: 170px;
+
+    margin:
+      12px auto 0;
+  }
+
+
+  /* RAM IMAGE */
+
+  .hero-visual {
+
+    right: -105px;
+
+    left: auto;
+
+    top: 62%;
+
+    width: 500px;
+    height: 500px;
+
+    transform:
+      translateY(-50%)
+      scale(0.62);
+  }
+
+
+  .hero-visual img {
+
+    opacity: 0.4;
+
+    filter:
+      sepia(0.5)
+      saturate(0.65)
+      brightness(1.16)
+      contrast(0.78);
+  }
+
+
+  /* CENTER TITLE */
+
+  .ram-mahfil-title {
+
+    position: fixed;
+
+    left: 50%;
+
+    top: 47%;
+
+    width: 310px;
+
+    transform:
+      translate(
+        -50%,
+        -50%
+      );
+
+    z-index: 100;
+  }
+
+
+  .mahfil-small {
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .ram-mahfil-title h2 {
+
+    font-size: 42px;
+  }
+
+
+  .ram-mahfil-title h3 {
+
+    font-size: 50px;
+  }
+
+
+  .mahfil-subtitle {
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .mahfil-divider {
+
+    width: 120px;
+  }
+
+
+  /* HIDE EXTRA */
+
+  .visual-label,
+  .side-mantra,
+  .bottom-mantra,
+  .corner-diya {
+
+    display: none;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL PHONE
+===================================================== */
+
+@media (max-width: 390px) {
+
+  .hero-message h1 {
+
+    font-size: 35px;
+  }
+
+
+  .ram-mahfil-title {
+
+    width: 280px;
+
+    top: 46%;
+  }
+
+
+  .ram-mahfil-title h2 {
+
+    font-size: 38px;
+  }
+
+
+  .ram-mahfil-title h3 {
+
+    font-size: 46px;
+  }
+}

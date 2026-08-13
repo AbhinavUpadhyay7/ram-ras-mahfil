@@ -1,0 +1,268 @@
+.ram-visual {
+
+  position: relative;
+
+  width: 650px;
+  height: 700px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: visible;
+
+  pointer-events: none;
+}
+
+
+/* DIVINE LIGHT */
+
+.ram-light {
+
+  position: absolute;
+
+  width: 570px;
+  height: 570px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 232, 160, 0.78) 0%,
+      rgba(255, 193, 74, 0.34) 35%,
+      rgba(240, 137, 25, 0.12) 58%,
+      transparent 73%
+    );
+
+  filter: blur(15px);
+
+  animation:
+    divineGlow 6s
+    ease-in-out
+    infinite;
+}
+
+
+@keyframes divineGlow {
+
+  0%,
+  100% {
+
+    transform:
+      scale(0.96);
+
+    opacity: 0.72;
+
+  }
+
+  50% {
+
+    transform:
+      scale(1.05);
+
+    opacity: 1;
+
+  }
+
+}
+
+
+/* HALO */
+
+.ram-light-core {
+
+  position: absolute;
+
+  width: 235px;
+  height: 235px;
+
+  top: 45px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 249, 216, 0.95) 0%,
+      rgba(255, 213, 111, 0.8) 32%,
+      rgba(240, 137, 25, 0.38) 58%,
+      transparent 72%
+    );
+
+  filter: blur(2px);
+}
+
+
+/* RAM IMAGE */
+
+.ram-shadow-image {
+
+  position: absolute;
+
+  width: 570px;
+
+  height: auto;
+
+  max-height: 690px;
+
+  object-fit: contain;
+
+  bottom: -10px;
+
+  opacity: 0.40;
+
+  mix-blend-mode: multiply;
+
+  filter:
+    blur(0.15px)
+    drop-shadow(
+      0 18px 30px
+      rgba(112, 42, 4, 0.12)
+    );
+
+  transform-origin:
+    center bottom;
+
+  animation:
+    ramBreath 7s
+    ease-in-out
+    infinite;
+
+  user-select: none;
+}
+
+
+@keyframes ramBreath {
+
+  0%,
+  100% {
+
+    transform:
+      translateY(0)
+      scale(1);
+
+  }
+
+  50% {
+
+    transform:
+      translateY(-5px)
+      scale(1.008);
+
+  }
+
+}
+
+
+/* IMAGE EDGE FADE */
+
+.ram-visual::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      transparent 38%,
+      rgba(245, 174, 65, 0.09) 70%,
+      rgba(245, 174, 65, 0.22) 100%
+    );
+
+  z-index: 3;
+}
+
+
+/* SUBTLE RAM MANTRA */
+
+.ram-visual-mantra {
+
+  position: absolute;
+
+  bottom: 25px;
+
+  color:
+    rgba(
+      126,
+      45,
+      5,
+      0.13
+    );
+
+  font-family:
+    "Rozha One",
+    serif;
+
+  font-size: 24px;
+
+  letter-spacing: 4px;
+
+  z-index: 5;
+}
+
+
+/* LARGE SCREEN */
+
+@media (min-width: 1400px) {
+
+  .ram-visual {
+
+    transform:
+      translateX(20px)
+      scale(1.03);
+
+  }
+
+}
+
+
+/* LAPTOP */
+
+@media (max-width: 1100px) {
+
+  .ram-visual {
+
+    transform:
+      scale(0.8);
+
+  }
+
+  .ram-shadow-image {
+
+    opacity: 0.36;
+
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .ram-visual {
+
+    width: 100%;
+
+    height: 430px;
+
+    transform:
+      scale(0.58);
+
+  }
+
+  .ram-shadow-image {
+
+    opacity: 0.28;
+
+  }
+
+}
